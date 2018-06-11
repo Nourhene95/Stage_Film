@@ -268,7 +268,7 @@ for i in range (5):
         # test on some training sequences
         evaluate_model(model, fre_tokenizer, trainX, train)
         # test on some test sequences
-        evaluate_model(model, fre_tokenizer, testX, test)
+        evaluate_model(model, fre_tokenizer, valX, test)
         
 
 
