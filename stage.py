@@ -261,7 +261,7 @@ for i in range (5):
         valY = encode_sequences(fre_tokenizer, fre_length, test[:, 1])
         valX = encode_sequences(eng_tokenizer, eng_length, test[:, 0])
         valY = encode_output(valY, fre_vocab_size)
-        model.fit(trainX, trainY, epochs=30, batch_size=32, validation_data=(testX, testY), callbacks=[checkpoint], verbose=2)
+        model.fit(trainX, trainY, epochs=30, batch_size=32, validation_data=(valX, valY), callbacks=[checkpoint], verbose=2)
         #model.fit(trainX, trainY, epochs=10, batch_size=64, validation_data=(valX, valY), callbacks=[learning_rate_reduction], verbose=2)
         #save model
         model.save(filename)
